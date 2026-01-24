@@ -8,7 +8,6 @@ function AdminForm({ onAdd, onClose, editing, onUpdate, alert }) {
   const [excerpt, setExcerpt] = useState(editing?.excerpt || '')
   const [txt, setTxt] = useState(editing?.content || '')
   const [imgUrl, setImgUrl] = useState(editing?.image || '')
-  const [imgFile, setImgFile] = useState(null)
   const [preview, setPreview] = useState(editing?.image || '')
 
   useEffect(() => {
@@ -24,7 +23,6 @@ function AdminForm({ onAdd, onClose, editing, onUpdate, alert }) {
   const imgChange = (e) => {
     const f = e.target.files[0]
     if (f) {
-      setImgFile(f)
       const r = new FileReader()
       r.onloadend = () => setPreview(r.result)
       r.readAsDataURL(f)
@@ -75,7 +73,6 @@ function AdminForm({ onAdd, onClose, editing, onUpdate, alert }) {
     setExcerpt('')
     setTxt('')
     setImgUrl('')
-    setImgFile(null)
     setPreview('')
     
     onClose()

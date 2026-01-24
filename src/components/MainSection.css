@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 70vh;
-  background: linear-gradient(135deg, #f5ebe0 0%, #e8dfd4 50%, #d6ccc2 100%);
+  background: linear-gradient(135deg, #f5e6d3 0%, #ead5c2 50%, #dfc4ad 100%);
   padding: 2rem 4rem 4rem;
   overflow: visible;
 }
@@ -15,7 +15,7 @@
   bottom: 0;
   overflow: hidden;
   z-index: 0;
-  background: #d6ccc2;
+  background: #dfc4ad;
 }
 
 .hero-video-background video {
@@ -35,7 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(245, 235, 224, 0.6) 0%, rgba(232, 223, 212, 0.6) 50%, rgba(214, 204, 194, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(245, 230, 211, 0.6) 0%, rgba(234, 213, 194, 0.6) 50%, rgba(223, 196, 173, 0.6) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -53,7 +53,7 @@
   }
   
   .hero-video-background::after {
-    background: linear-gradient(135deg, rgba(245, 235, 224, 0.65) 0%, rgba(232, 223, 212, 0.65) 50%, rgba(214, 204, 194, 0.65) 100%);
+    background: linear-gradient(135deg, rgba(245, 230, 211, 0.65) 0%, rgba(234, 213, 194, 0.65) 50%, rgba(223, 196, 173, 0.65) 100%);
   }
 }
 
@@ -64,7 +64,7 @@
   }
   
   .hero-video-background::after {
-    background: linear-gradient(135deg, rgba(245, 235, 224, 0.7) 0%, rgba(232, 223, 212, 0.7) 50%, rgba(214, 204, 194, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(245, 230, 211, 0.7) 0%, rgba(234, 213, 194, 0.7) 50%, rgba(223, 196, 173, 0.7) 100%);
   }
 }
 

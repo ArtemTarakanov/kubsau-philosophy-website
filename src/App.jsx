@@ -33,7 +33,7 @@ function App() {
   const handleConfirm = useCallback(() => {
     if (popup.confirm) popup.confirm()
     closePopup()
-  }, [popup.confirm, closePopup])
+  }, [popup, closePopup])
 
   const openArticle = useCallback((a) => {
     setArticle(a)
