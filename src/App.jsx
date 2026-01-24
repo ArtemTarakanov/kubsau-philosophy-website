@@ -53,10 +53,16 @@ function App() {
   }, [])
 
   const logout = useCallback(() => {
-    setAdmin(false)
-    setShowForm(false)
-    setShowLogin(false)
-  }, [])
+    confirm(
+      'Выход из аккаунта',
+      'Вы уверены, что хотите выйти из аккаунта администратора?',
+      () => {
+        setAdmin(false)
+        setShowForm(false)
+        setShowLogin(false)
+      }
+    )
+  }, [confirm])
 
   const addPost = useCallback((p) => {
     setPosts(prev => [p, ...prev])
