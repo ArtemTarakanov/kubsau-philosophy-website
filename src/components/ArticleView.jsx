@@ -1,6 +1,6 @@
-import './ArticlePage.css'
+import './ArticleView.css'
 
-const articles = [
+const otherPosts = [
   {
     id: 1,
     title: 'Экология сознания',
@@ -21,8 +21,8 @@ const articles = [
   }
 ]
 
-function ArticlePage({ article, onBack, onArticleClick }) {
-  const otherArticles = articles.filter(a => a.id !== article.id)
+function ArticleView({ article, onBack, onClick }) {
+  const others = otherPosts.filter(a => a.id !== article.id)
   
   return (
     <div className="article-page">
@@ -31,7 +31,7 @@ function ArticlePage({ article, onBack, onArticleClick }) {
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M13 4L7 10L13 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Назад к статьям
+          Назад
         </button>
         
         <div className="article-header">
@@ -47,17 +47,17 @@ function ArticlePage({ article, onBack, onArticleClick }) {
         <div className="other-articles">
           <h3>Другие статьи</h3>
           <div className="other-articles-grid">
-            {otherArticles.map(otherArticle => (
-              <div key={otherArticle.id} className="other-article-card">
+            {others.map(p => (
+              <div key={p.id} className="other-article-card">
                 <div className="other-article-image">
-                  <img src={otherArticle.image} alt={otherArticle.title} />
+                  <img src={p.image} alt={p.title} />
                 </div>
                 <div className="other-article-body">
-                  <h4>{otherArticle.title}</h4>
-                  <p>{otherArticle.excerpt}</p>
+                  <h4>{p.title}</h4>
+                  <p>{p.excerpt}</p>
                   <button 
                     className="other-article-btn"
-                    onClick={() => onArticleClick(otherArticle)}
+                    onClick={() => onClick(p)}
                   >
                     ЧИТАТЬ
                   </button>
@@ -71,4 +71,4 @@ function ArticlePage({ article, onBack, onArticleClick }) {
   )
 }
 
-export default ArticlePage
+export default ArticleView
